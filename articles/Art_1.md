@@ -16,3 +16,7 @@ Merz's tweet echoes Macron’s philosophy, emphasizing the Iranian people's righ
 
 
 What does this attack really bring us? What if the regime collapses and Iran plunges into chaos? Who pays the consequence? Not the U.S., not Israel but Europe. Is Europe ready for another wave of migrants coming from the Middle East? Are we ready for a more destabilized Middle East that will impact us much more than the US? As Zelensky put it, they have a nice ocean and won't feel it as we will. We are all tired of Europe playing second fiddle to the U.S., of not being a credible partner, despite the enormous potential. Why don't we build our own strategy? Let's become a real international actor and not mere bystanders. For that to happen we need a more compact and united Europe. Until we won't achieve it, we will be forced to turn the blind eye and to play America's game. 
+
+[Back](https://andreaacosentino.github.io/)
+
+*Published on: 04-03-2026*
