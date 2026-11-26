@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrea Cosentino</title>
+  <meta name="description" content="Andrea Cosentino, MSc in Quantum Information (Sorbonne Université). Interested in quantum algorithms, graph theory, quantum simulation and semialgebraic proofs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfbf9;
+      --text: #1c1c1a;
+      --muted: #6b6b66;
+      --line: #e6e5e0;
+      --accent: #2f5bd3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #e9e8e4;
+        --muted: #9a9993;
+        --line: #2a2a28;
+        --accent: #8aa8ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 400 16px/1.65 "Inter", system-ui, -apple-system, sans-serif;
+    }
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 96px 24px 64px;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--line);
+      text-underline-offset: 3px;
+      transition: text-decoration-color .15s, color .15s;
+    }
+    a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+    header { margin-bottom: 56px; }
+    h1 {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 500;
+      font-size: 2.6rem;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0 0 8px;
+    }
+    .role { color: var(--muted); margin: 0; }
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .mail {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color .15s, border-color .15s;
+    }
+    .mail:hover, .mail:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+    .mail .tip {
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 8px);
+      transform: translate(-50%, 4px);
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 0.78rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .15s, transform .15s;
+    }
+    .mail:hover .tip, .mail:focus-visible .tip, .mail.copied .tip {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 4px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2fa36b;
+      position: relative;
+    }
+    .dot::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: #2fa36b;
+      animation: pulse 2s ease-out infinite;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(2.8); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .dot::after { animation: none; }
+    }
+
+    section {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+    }
+    h2 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 4px 0 0;
+    }
+    section p { margin: 0 0 12px; }
+    section p:last-child { margin-bottom: 0; }
+
+    .title { font-weight: 500; }
+    .meta { color: var(--muted); font-size: 0.92rem; }
+    .thesis { margin-top: 14px; }
+    .thesis-title {
+      font-family: "Newsreader", Georgia, serif;
+      font-style: italic;
+      font-size: 1.08rem;
+    }
+
+    .interests { list-style: none; padding: 0; margin: 0; }
+    .interests li { margin-bottom: 14px; }
+    .interests li:last-child { margin-bottom: 0; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 56px 16px 48px; }
+      h1 { font-size: 2.1rem; }
+      section { grid-template-columns: 1fr; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Andrea Cosentino</h1>
+      <p class="role">MSc in Quantum Information · Sorbonne Université</p>
+      <div class="header-row">
+        <p class="status"><span class="dot"></span>Looking for a PhD position</p>
+        <button class="mail" type="button" data-email="andreaacosentino@proton.me" aria-label="Copy email address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m3 7 9 6 9-6"/>
+          </svg>
+          <span class="tip" role="status">Copy email</span>
+        </button>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <div>
+        <p>I hold a Master's degree in Quantum Information from Sorbonne Université. My thesis, carried out at IRIF (Institut de Recherche en Informatique Fondamentale) under the supervision of Arthur Braida, studied how analog quantum computers can be used to tackle the Quantum MaxCut problem.</p>
+        <p>I am now looking for a PhD position at the intersection of quantum algorithms and theoretical computer science. If my interests fit your group, I'd be glad to <a href="mailto:andreaacosentino@proton.me">hear from you</a>.</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research interests</h2>
+      <ul class="interests">
+        <li>
+          <div class="title">Quantum algorithms</div>
+          <div class="meta">Designing and analysing algorithms for quantum computers, from analog to gate-based models.</div>
+        </li>
+        <li>
+          <div class="title">Quantum simulation</div>
+          <div class="meta">Algorithms for simulating quantum many-body systems efficiently.</div>
+        </li>
+        <li>
+          <div class="title">Graph theory</div>
+          <div class="meta">Combinatorial optimization on graphs and its quantum counterparts, such as Quantum MaxCut.</div>
+        </li>
+        <li>
+          <div class="title">Semialgebraic proofs</div>
+          <div class="meta">Proof systems and hierarchies, such as sum-of-squares, for certifying bounds on classical and quantum optimization problems.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div>
+        <div class="title">MSc in Quantum Information</div>
+        <div class="meta">Sorbonne Université</div>
+        <div class="thesis">
+          <div class="thesis-title">Analog Quantum Computing for the Quantum MaxCut Problem</div>
+          <div class="meta">Master's thesis · IRIF, Paris · Supervisor: Arthur Braida</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Andrea Cosentino</footer>
+  </main>
+  <script>
+    (function () {
+      var btn = document.querySelector('.mail');
+      var tip = btn.querySelector('.tip');
+      var email = btn.dataset.email;
+      var timer;
+
+      function fallbackCopy(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'absolute';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        return ok;
+      }
+
+      function show(text) {
+        tip.textContent = text;
+        btn.classList.add('copied');
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          btn.classList.remove('copied');
+          tip.textContent = 'Copy email';
+        }, 1800);
+      }
+
+      btn.addEventListener('click', function () {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(
+            function () { show('Copied!'); },
+            function () { show(fallbackCopy(email) ? 'Copied!' : email); }
+          );
+        } else {
+          show(fallbackCopy(email) ? 'Copied!' : email);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
